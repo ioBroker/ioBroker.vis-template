@@ -16,7 +16,7 @@
         "keywords":                 ["template", "vis", "GUI", "graphical", "scada"],
         "readme":                   "https://github.com/ioBroker/ioBroker.vis-template/blob/master/README.md",
         "authors": [
-            "@@Author@@ <@@Author@@@mail.com>"
+            "@@Author@@ <@@email@@>"
         ],
         "localLink":                "%web_protocol%://%ip%:%web_port%/vis/edit.html",
         "license":                  "MIT",
