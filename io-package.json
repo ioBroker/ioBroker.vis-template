@@ -1,0 +1,34 @@
+{
+    "common": {
+        "name":                     "vis-template",
+        "version": "0.0.1",
+        "title":                    "ioBroker Visualisation - template Widgets",
+        "desc": {
+            "en":                   "template Widgets for ioBroker.vis",
+            "de":                   "template Widgets für ioBroker.vis",
+            "ru":                   "template Widgets для ioBroker.vis"
+        },
+        "platform":                 "Javascript/Node.js",
+        "icon":                     "template.png",
+        "enabled":                  true,
+        "mode":                     "once",
+        "extIcon":                  "https://github.com/ioBroker/ioBroker.js-controller/raw/master/adapter/example/admin/example.png",
+        "keywords":                 ["template", "vis", "GUI", "graphical", "scada"],
+        "readme":                   "https://github.com/ioBroker/ioBroker.vis-template/blob/master/README.md",
+        "authors": [
+            "@@Author@@ <@@Author@@@mail.com>"
+        ],
+        "localLink":                "%web_protocol%://%ip%:%web_port%/vis/edit.html",
+        "license":                  "MIT",
+        "dependencies":             ["vis"],
+        "onlyWWW":                  true,
+        "singleton":                true,
+        "type":                     "vis",
+		"restartAdapters":          ["vis"]
+    },
+    "native": {
+        "dependencies":          []
+    },
+    "instanceObjects": [
+    ]
+}
