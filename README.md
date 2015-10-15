@@ -25,6 +25,11 @@ To create your own widget set:
 - to use this template you should copy it into iobroker/node_modules directory
   call "iobroker visdebug MYNEWNAME" to enable debugging and upload widget to vis
 
+- enable debug in vis with
+  iobroker visdebug MYNEWNAME
+  
+  You can just edit the files in /opt/iobroker/node_modules/iobroker.vis-MYNEWNAME, but call after every change the "iobroker visdebug MYNEWNAME"
+  
 - create your widgets
   You can find debug instructions here: https://github.com/ioBroker/ioBroker/wiki/How-to-debug-vis-and-to-write-own-widget-set
 
