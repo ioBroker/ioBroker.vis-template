@@ -8,14 +8,16 @@ This is template widget set to create your own.
 You can read instructions in template.js, template.html files
 
 To create your own widget set:
-- download this packet from git https://github.com/ioBroker/ioBroker.vis-template/archive/master.zip
+- download and unpack this packet from github https://github.com/ioBroker/ioBroker.vis-template/archive/master.zip
   or clone git repository "git clone https://github.com/ioBroker/ioBroker.vis.git"
 
-- download required npm packets
+- download required npm packets. Write in ioBroker.vis-template directory:
   npm install
   
-- set your name of this template. Call
+- set name of this template. Call
+  
   grunt rename --name=MYNEWNAME --email=email@mail.com --author="Author Name"
+  
   MYNEWNAME must be lower case and with no spaces.
  
 - rename directory from "ioBroker.vis-template" to "ioBroker.vis-MYNEWNAME"
