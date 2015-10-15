@@ -22,9 +22,14 @@ To create your own widget set:
  
 - rename directory from "ioBroker.vis-template" to "ioBroker.vis-MYNEWNAME"
 
+- to use this template you should copy it into iobroker/node_modules directory
+  call "iobroker visdebug MYNEWNAME" to enable debugging and upload widget to vis
+
 - create your widgets
   You can find debug instructions here: https://github.com/ioBroker/ioBroker/wiki/How-to-debug-vis-and-to-write-own-widget-set
 
+- change version: edit package.json and then call "grunt p"
+  
 - share it
 
 ## Changelog
