@@ -13,11 +13,12 @@ module.exports = function (grunt) {
     var version   = (pkg && pkg.version) ? pkg.version : iopackage.common.version;
     var newname   = grunt.option('name');
     var author    = grunt.option('author') || '@@Author@@';
-    var email     = grunt.option(email)    || '@@email@@';
+    var email     = grunt.option('email')  || '@@email@@';
     var fs        = require('fs');
 
     // check arguments
     if (process.argv[2] == 'rename') {
+		console.log('Try to rename to "' + newname + '"');
         if (!newname) {
             console.log('Please write the new template name, like: "grunt rename --name=mywidgetset" --author="Author Name"');
             process.exit();
@@ -30,10 +31,18 @@ module.exports = function (grunt) {
             console.log('Name must be lower case.');
             process.exit();
         }
-        fs.renameSync(__dirname + '/admin/template.png',              __dirname + '/admin/' + newname + '.png');
-        fs.renameSync(__dirname + '/widgets/template.html',           __dirname + '/widgets/' + newname + '.html');
-        fs.renameSync(__dirname + '/widgets/template/js/template.js', __dirname + '/widgets/template/js/' + newname + '.js');
-        fs.renameSync(__dirname + '/widgets/template',                __dirname + '/widgets/' + newname);
+        if (fs.existsSync(__dirname + '/admin/template.png')) {
+            fs.renameSync(__dirname + '/admin/template.png',              __dirname + '/admin/' + newname + '.png');
+        }
+        if (fs.existsSync(__dirname + '/widgets/template.html')) {
+            fs.renameSync(__dirname + '/widgets/template.html',           __dirname + '/widgets/' + newname + '.html');
+        }
+        if (fs.existsSync(__dirname + '/widgets/template/js/template.js')) {
+            fs.renameSync(__dirname + '/widgets/template/js/template.js', __dirname + '/widgets/template/js/' + newname + '.js');
+        }
+        if (fs.existsSync(__dirname + '/widgets/template')) {
+            fs.renameSync(__dirname + '/widgets/template',                __dirname + '/widgets/' + newname);
+        }
     }
 
     // Project configuration.
@@ -185,10 +194,17 @@ module.exports = function (grunt) {
         'jshint',
         'jscs'
     ]);
+
     grunt.registerTask('prepublish', [
         'http',
         'replace:version'
     ]);
+
+    grunt.registerTask('p', [
+        'http',
+        'replace:version'
+    ]);
+
     grunt.registerTask('rename', [
         'replace:name'
     ]);

@@ -109,11 +109,11 @@
         data-vis-set="template"
         data-vis-type="helper"
         data-vis-name="Show instance">
-    <div class="vis-widget <%== this.data.attr('class') %>" style="width:100px; height:50px;" id="<%= this.data.attr('wid') %>" >
+    <div class="vis-widget <%== this.data.attr('class') %>" style="width:230px; height:210px;" id="<%= this.data.attr('wid') %>" >
         <div class="template-class vis-widget-body <%== this.data.attr('class') %>" style="padding:2px" >
             OID: <%= this.data.attr('oid') %><br>
-            OID value: <%== vis.states[this.data.attr('oid')] ? vis.states[this.data.attr('oid')].val : 'not found' %><br>
-			Color: <div style="color: <%= this.data.attr('myColor') %>"><%= this.data.attr('myColor') %></div><br>
+            OID value: <%== vis.states[this.data.attr('oid') + '.val'] %><br>
+			Color: <span style="color: <%= this.data.attr('myColor') %>"><%= this.data.attr('myColor') %></span><br>
 			htmlText: <textarea readonly style="width:100%"><%== this.data.attr('htmlText') %></textarea><br>
 			extraAttr: <%== this.data.attr('extraAttr') %><br>
 			Browser instance: <%= vis.instance %><br>

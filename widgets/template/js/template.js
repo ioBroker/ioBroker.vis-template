@@ -11,9 +11,16 @@
 // add translations for edit mode
 if (vis.editMode) {
     $.extend(true, systemDictionary, {
-        "circleWidth":      {"en": "Сircle width",      "de": "Kreisbreite",            "ru": "Ширина дуги"},
-        "showValue":        {"en": "Show value",        "de": "Wert anzeigen",          "ru": "Показать значение"}
-	};
+        "myColor":          {"en": "myColor",       "de": "mainColor",  "ru": "Мой цвет"},
+        "myColor_tooltip":  {
+            "en": "Description of\x0AmyColor",
+            "de": "Beschreibung von\x0AmyColor",
+            "ru": "Описание\x0AmyColor"
+        },
+        "htmlText":         {"en": "htmlText",      "de": "htmlText",   "ru": "htmlText"},
+        "group_extraMyset": {"en": "extraMyset",    "de": "extraMyset", "ru": "extraMyset"},
+        "extraAttr":        {"en": "extraAttr",     "de": "extraAttr",  "ru": "extraAttr"}
+    });
 }
 
 // add translations for non-edit mode
@@ -40,10 +47,11 @@ vis.binds.template = {
         }
 
         var text = '';
-        text += 'OID value: <div class="template-value">' + (vis.states[data.oid] ? vis.states[data.oid].val : 'not found') + '</div><br>';
-        text += 'Color: <div style="color: ' + data.myColor + '">' + data.myColor + '</div><br>';
-        text += 'htmlText: <textarea readonly style="width:100%">' + data.htmlText + '</textarea><br>';
-        text += 'extraAttr: extraAttr<br>';
+        text += 'OID: ' + data.oid + '</div><br>';
+        text += 'OID value: <span class="myset-value">' + vis.states[data.oid + '.val'] + '</span><br>';
+        text += 'Color: <span style="color: ' + data.myColor + '">' + data.myColor + '</span><br>';
+        text += 'htmlText: <textarea readonly style="width:100%">' + (data.htmlText || '') + '</textarea><br>';
+        text += 'extraAttr: ' + data.extraAttr + '<br>';
         text += 'Browser instance: ' + vis.instance + '<br>';
 
         $('#' + widgetID).html(text);
