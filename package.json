@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "author": {
     "name": "@@Author@@",
-    "email": "@@Author@@@mail.com"
+    "email": "@@email@@"
   },
   "contributors": [
-    "@@Author@@ <@@Author@@@mail.com>"
+    "@@Author@@ <@@email@@>"
   ],
   "homepage": "https://github.com/ioBroker/ioBroker.vis-template",
   "repository": {

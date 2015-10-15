@@ -3,7 +3,7 @@
 
     version: "0.0.1"
 
-    Copyright 10.2015-2016 @@Author@@<@@Author@@@mail.com>
+    Copyright 10.2015-2016 @@Author@@<@@email@@>
 
 */
 "use strict";

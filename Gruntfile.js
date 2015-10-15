@@ -13,6 +13,7 @@ module.exports = function (grunt) {
     var version   = (pkg && pkg.version) ? pkg.version : iopackage.common.version;
     var newname   = grunt.option('name');
     var author    = grunt.option('author') || '@@Author@@';
+    var email     = grunt.option(email)    || '@@email@@';
     var fs        = require('fs');
 
     // check arguments
@@ -91,6 +92,10 @@ module.exports = function (grunt) {
                         {
                             match: /@@Author@@/g,
                             replacement: author
+                        },
+                        {
+                            match: /@@email@@/g,
+                            replacement: email
                         }
                     ]
                 },

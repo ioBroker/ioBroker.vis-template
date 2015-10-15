@@ -15,12 +15,10 @@ To create your own widget set:
   npm install
   
 - set your name of this template. Call
-  "grunt rename --name=MYNEWNAME"
+  grunt rename --name=MYNEWNAME --email=email@mail.com --author="Author Name"
   MYNEWNAME must be lower case and with no spaces.
  
 - rename directory from "ioBroker.vis-template" to "ioBroker.vis-MYNEWNAME"
-
-- replace @@Author@@ and @@Author@@@mail.com in io-package.json, package.json, LICENSE, README.md, MYNEWNAME.js and MYNEWNAME.html
 
 - create your widgets
   You can find debug instructions here: https://github.com/ioBroker/ioBroker/wiki/How-to-debug-vis-and-to-write-own-widget-set
