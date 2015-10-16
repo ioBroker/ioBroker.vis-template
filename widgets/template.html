@@ -19,7 +19,7 @@
         type="text/ejs"
         class="vis-tpl"
 		
-		"type" and "class" are alyways the same. "id" is unique and must start with "tplSETNAME" and ends with widget name. Use camel-case for it.
+		"type" and "class" are always the same. "id" is unique and must start with "tplSETNAME" and ends with widget name. Use camel-case for it.
 		
     ----------------------------------------------------------	
 	data-vis-attrs - divided with semicolon the list of attributes, like attr1/id;attr2/color
@@ -50,7 +50,7 @@
 					  html - dialog box with html editor
 				
 				If type is "id", you can define filer for "Select ID Dialog", like "myID/id,level.temperature".
-				Additionaly you can define callback(onChangeFunc), which will be called if this attribute was changed by user for different purposes: validate entry, fill other attributes, ...
+				Additionally you can define callback(onChangeFunc), which will be called if this attribute was changed by user for different purposes: validate entry, fill other attributes, ...
 				
 		You can define additional data-vis-attrs line: data-vis-attrs0, data-vis-attrs1. Anyway data-vis-attrs must be there. You may not skip numbers. 
 		E.g. in "data-vis-attrs="A;" data-vis-attrs1="B" attribute B will be not parsed.
@@ -103,7 +103,7 @@
 <script id="tplTemplateShowInstance"
         type="text/ejs"
         class="vis-tpl"
-        data-vis-prev='data-vis-prev='<div id="prev_tplMysetShowInstance" style="position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev " style="width: 280px; height: 159px;" > <div class="myset-class vis-widget-prev-body " style="padding:2px"> OID: hm-rpc.0.EEQ0006629.1.STATE<br> OID value: true<br> Color: <span style="color: rgb(128, 0, 0);">#800000</span><br> htmlText: <textarea readonly="" style="width:100%">asda</textarea></div>'
+        data-vis-prev='<div id="prev_tplMysetShowInstance" style="position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev " style="width: 280px; height: 159px;" > <div class="myset-class vis-widget-prev-body " style="padding:2px"> OID: hm-rpc.0.EEQ0006629.1.STATE<br> OID value: true<br> Color: <span style="color: rgb(128, 0, 0);">#800000</span><br> htmlText: <textarea readonly="" style="width:100%">asda</textarea></div>'
         data-vis-attrs="oid/id;myColor/color;htmlText/text;"
         data-vis-attrs0="group.extraTemplate;extraAttr"
         data-vis-set="template"
@@ -114,9 +114,9 @@
             OID: <%= this.data.attr('oid') %><br>
             OID value: <%== vis.states[this.data.attr('oid') + '.val'] %><br>
 			Color: <span style="color: <%= this.data.attr('myColor') %>"><%= this.data.attr('myColor') %></span><br>
-			htmlText: <textarea readonly style="width:100%"><%== this.data.attr('htmlText') %></textarea><br>
 			extraAttr: <%== this.data.attr('extraAttr') %><br>
 			Browser instance: <%= vis.instance %><br>
+			htmlText: <textarea readonly style="width: calc(100% - 10px)"><%== this.data.attr('htmlText') %></textarea><br>
         </div>
     </div>
 </script>
@@ -124,13 +124,13 @@
 <script id="tplTemplateHelper"
         type="text/ejs"
         class="vis-tpl"
-         data-vis-prev='data-vis-prev='<div id="prev_tplTemplateHelper" style="position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev " style="width: 280px; height: 159px;" > <div class="myset-class vis-widget-prev-body " style="padding:2px"> OID: hm-rpc.0.EEQ0006629.1.STATE<br> OID value: true<br> Color: <span style="color: rgb(128, 0, 0);">#800000</span><br> htmlText: <textarea readonly="" style="width:100%">asda</textarea></div>'
+        data-vis-prev='<div id="prev_tplTemplateHelper" style="position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev " style="width: 280px; height: 159px;" > <div class="myset-class vis-widget-prev-body " style="padding:2px"> OID: hm-rpc.0.EEQ0006629.1.STATE<br> OID value: true<br> Color: <span style="color: rgb(128, 0, 0);">#800000</span><br> htmlText: <textarea readonly="" style="width:100%">asda</textarea></div>'
         data-vis-attrs="oid/id;myColor/color;htmlText/text;"
         data-vis-attrs0="group.extraTemplate;extraAttr"
         data-vis-set="template"
         data-vis-type="helper"
         data-vis-name="Helper">
-    <div class="vis-widget <%== this.data.attr('class') %>" style="overflow:visible; width: 64px; height: 64px" id="<%= this.data.attr('wid') %>"><%
+    <div class="vis-widget <%== this.data.attr('class') %>" style="overflow:visible; width: 230px; height: 210px" id="<%= this.data.attr('wid') %>"><%
         vis.binds.template.createWidget(this.data.wid, this.view, this.data, this.style);
     %></div>
 </script>
