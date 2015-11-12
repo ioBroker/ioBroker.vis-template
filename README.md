@@ -9,7 +9,7 @@ You can read instructions in template.js, template.html files
 
 To create your own widget set:
 - download and unpack this packet from github ```https://github.com/ioBroker/ioBroker.vis-template/archive/master.zip```
-  or clone git repository ```git clone https://github.com/ioBroker/ioBroker.vis.git```
+  or clone git repository ```git clone https://github.com/ioBroker/ioBroker.vis-template.git```
 
 - download required npm packets. Write in ioBroker.vis-template directory:
   npm install
