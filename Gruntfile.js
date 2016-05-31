@@ -117,7 +117,8 @@ module.exports = function (grunt) {
                                  srcDir + 'LICENSE',
                                  srcDir + 'package.json',
                                  srcDir + 'README.md',
-                                 srcDir + 'io-package.json'
+                                 srcDir + 'io-package.json',
+                                 srcDir + 'Gruntfile.js'
                         ],
                         dest:    srcDir
                     },
