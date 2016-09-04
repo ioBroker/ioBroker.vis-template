@@ -22,9 +22,10 @@
         "license":                  "MIT",
         "dependencies":             ["vis"],
         "onlyWWW":                  true,
+        "noConfig":                 true,
         "singleton":                true,
         "type":                     "vis",
-		"restartAdapters":          ["vis"]
+        "restartAdapters":          ["vis"]
     },
     "native": {
         "dependencies":          []
