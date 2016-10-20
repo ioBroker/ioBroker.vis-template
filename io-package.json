@@ -2,6 +2,18 @@
     "common": {
         "name":                     "vis-template",
         "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+              "en": "alfa version",
+              "de": "alfa version",
+              "ru": "Альфа версия"
+            },
+            "0.0.0": {
+              "en": "initial adapter",
+              "de": "Anfangsadapter",
+              "ru": "Первоначальный адаптер"
+            }
+        },
         "title":                    "ioBroker Visualisation - template Widgets",
         "desc": {
             "en":                   "template Widgets for ioBroker.vis",
